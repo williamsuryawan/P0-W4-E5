@@ -4,10 +4,14 @@ function ubahHuruf(kata) {
   var locate = [];
   var baru = "";
   for(i=0; i<kata.length;i++){
+    if (kata[i] === "z") {
+      locate.push(-1)
+    } else {
     for(j=0; j<abjad.length; j++){
       if(kata[i] == abjad[j]){
         locate.push(j);
       }
+    }
     }
   }
   for(k=0; k<locate.length; k++){
@@ -22,3 +26,4 @@ console.log(ubahHuruf('developer')); // efwfmpqfs
 console.log(ubahHuruf('javascript')); // kbwbtdsjqu
 console.log(ubahHuruf('keren')); // lfsfo
 console.log(ubahHuruf('semangat')); // tfnbohbu
+console.log(ubahHuruf('zzuu')); // aavv
